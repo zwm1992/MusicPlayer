@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item 
+        android:id="@+id/setToBell"
+        android:title="@string/setToBell"/>
+    <item 
+        android:id="@+id/addToPlayList"
+        android:title="@string/addToPlayList"/>
+
+</menu>

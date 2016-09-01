@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/content_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/styleInfo"
+            android:textColor="#ffffff" />
+
+        <Spinner
+            android:id="@+id/styleSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:popupBackground="#666666" />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chooseMusic"
+            android:text="@string/chooseMusic"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/picView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/imageInfo"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/textStyle"
+            android:layout_width="150dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:textColor="#0000ff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/singer"
+            style="@style/textStyle"
+            android:layout_marginTop="15dp"
+            android:textColor="#0000ff"
+            android:layout_width="150dp"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/currentTime"
+                style="@style/textStyle" />
+
+            <SeekBar
+                android:id="@+id/playProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                style="@style/textStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageButton
+                android:id="@+id/first"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="first"
+                android:src="@drawable/first" />
+
+            <ImageButton
+                android:id="@+id/pre"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="pre"
+                android:src="@drawable/pre" />
+
+            <ImageButton
+                android:id="@+id/control"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="control"
+                android:src="@drawable/pause" />
+
+            <ImageButton
+                android:id="@+id/next"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="next"
+                android:src="@drawable/next" />
+
+            <ImageButton
+                android:id="@+id/last"
+                style="@style/imageBtnStyle"
+                android:contentDescription="@string/imageInfo"
+                android:onClick="last"
+                android:src="@drawable/last" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
